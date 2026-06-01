@@ -10,11 +10,11 @@
 
 [**🔴 看真实例子 · See it live →**](https://skylar-nyc-100.netlify.app) &nbsp;·&nbsp; [**⚡ 3 步开始 · Quick start ↓**](#-3-步拥有你自己的好吃榜--make-it-yours-in-3-steps)
 
-<a href="https://skylar-nyc-100.netlify.app"><img src="assets/demo.gif" width="760" alt="City Food Guide — 滚动浏览、按菜系筛选、一键打卡"></a>
+<a href="https://skylar-nyc-100.netlify.app"><img src="assets/hero.png" width="760" alt="City Food Guide — 按菜系筛选的精致照片墙，一键打卡"></a>
 
-*↑ 真实例子「Skylar's NYC 100」：滚动浏览 → 按菜系筛选 → 一键打卡。Fork 一下，30 分钟内换成你的城市。*
+*↑ 真实例子「Skylar's NYC 100」：按菜系筛选的照片墙，每家店可一键打卡。Fork 一下，30 分钟内换成你的城市。*
 
-<sub><a href="assets/demo.png">📸 看完整长截图 · See the full-page screenshot</a></sub>
+<sub><a href="assets/demo.png">📸 看完整长截图 · See the full-page screenshot</a> &nbsp;·&nbsp; <a href="assets/demo.gif">🎬 看动图演示 · Watch the animated demo</a></sub>
 
 </div>
 
