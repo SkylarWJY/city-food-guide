@@ -1,0 +1,26 @@
+# build output
+dist/
+
+# photos are large + per-creator — keep them out of the repo
+images/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.PNG
+*.JPG
+# ...but DO ship the demo screenshots in assets/
+!assets/*.png
+!assets/*.jpg
+
+# generated artifacts
+*.pdf
+my-maps.csv
+*.geocache.json
+
+# os / editor cruft
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+node_modules/

@@ -1,0 +1,1103 @@
+{
+  "config": {
+    "site_title": "Skylar's NYC 100 · 纽约好吃榜",
+    "brand_wordmark": "<em>Skylar's</em> NYC 100",
+    "brand_sub": "· 纽约好吃榜",
+    "site_url": "https://skylar-nyc-100.netlify.app/",
+    "og_image": "https://skylar-nyc-100.netlify.app/og.png",
+    "site_display_url": "skylar-nyc-100.netlify.app",
+    "share_link": "https://skylar-nyc-100.netlify.app",
+    "beehiiv_form_id": "460499a5-dbab-4eab-9fcc-8bc9edcdf3b2",
+    "ig_url": "https://instagram.com/skylarwjy",
+    "ig_handle": "@skylarwjy",
+    "xhs_handle": "@Skylar创业版",
+    "caption_brand_zh": "Skylar 私藏纽约好吃榜",
+    "caption_brand_en": "Skylar's NYC 100",
+    "groups": [
+      {
+        "zh": "全部",
+        "en": "All"
+      },
+      {
+        "zh": "日料",
+        "en": "Japanese"
+      },
+      {
+        "zh": "韩餐",
+        "en": "Korean"
+      },
+      {
+        "zh": "中餐",
+        "en": "Chinese"
+      },
+      {
+        "zh": "法餐",
+        "en": "French"
+      },
+      {
+        "zh": "意餐",
+        "en": "Italian"
+      },
+      {
+        "zh": "海鲜",
+        "en": "Seafood"
+      },
+      {
+        "zh": "美式",
+        "en": "American"
+      },
+      {
+        "zh": "各国",
+        "en": "Global"
+      },
+      {
+        "zh": "酒吧",
+        "en": "Bars"
+      },
+      {
+        "zh": "风景",
+        "en": "Views"
+      }
+    ]
+  },
+  "venues": [
+    {
+      "name": "Sushi Blossoms",
+      "type": "寿司 · Omakase",
+      "group": "日料",
+      "addr": "334 8th Ave, Chelsea",
+      "type_en": "Sushi · Omakase",
+      "img": "IMG_5988",
+      "lat": 40.747445,
+      "lng": -73.9968
+    },
+    {
+      "name": "Omakase Shiro",
+      "type": "寿司 · Omakase",
+      "group": "日料",
+      "addr": "285 Columbus Ave, Fl 2, UWS",
+      "type_en": "Sushi · Omakase",
+      "img": "IMG_6051",
+      "lat": 40.778303,
+      "lng": -73.977916
+    },
+    {
+      "name": "Kinzan Omakase",
+      "type": "寿司 · A5 和牛手卷",
+      "group": "日料",
+      "addr": "259 6th Ave, West Village",
+      "type_en": "Sushi · A5 wagyu handroll",
+      "img": "IMG_6055",
+      "featured_rank": 11,
+      "lat": 40.728697,
+      "lng": -74.002768
+    },
+    {
+      "name": "Koi Omakase",
+      "type": "寿司 · Omakase",
+      "group": "日料",
+      "addr": "55 5th Ave, Brooklyn",
+      "type_en": "Sushi · Omakase",
+      "img": "IMG_6056",
+      "lat": 40.681044,
+      "lng": -73.977062
+    },
+    {
+      "name": "Mikado",
+      "type": "社区寿司店",
+      "group": "日料",
+      "addr": "525 6th Ave, Greenwich Village",
+      "type_en": "Neighborhood sushi",
+      "img": "IMG_6042",
+      "lat": 40.729196,
+      "lng": -74.002444
+    },
+    {
+      "name": "Mikiya Wagyu Shabu House",
+      "type": "和牛涮涮锅",
+      "group": "日料",
+      "addr": "954 2nd Ave, Midtown East",
+      "type_en": "Wagyu shabu-shabu",
+      "img": "IMG_6047",
+      "lat": 40.755091,
+      "lng": -73.968005
+    },
+    {
+      "name": "Kimura",
+      "type": "日式火锅 · 居酒屋",
+      "group": "日料",
+      "addr": "31 St Marks Pl, East Village",
+      "type_en": "Japanese hot pot · izakaya",
+      "img": "IMG_6014",
+      "lat": 40.729043,
+      "lng": -73.988206
+    },
+    {
+      "name": "Nonono",
+      "type": "居酒屋 · 烤串",
+      "group": "日料",
+      "addr": "118 Madison Ave, NoMad",
+      "type_en": "Izakaya · skewers",
+      "img": "IMG_6011",
+      "lat": 40.745401,
+      "lng": -73.984854
+    },
+    {
+      "name": "Heno Heno",
+      "type": "居酒屋 · 清酒吧",
+      "group": "日料",
+      "addr": "358 W 46th St, Hell's Kitchen",
+      "type_en": "Izakaya · sake bar",
+      "img": "IMG_6001",
+      "lat": 40.760476,
+      "lng": -73.990143
+    },
+    {
+      "name": "Kawabun",
+      "type": "日式割烹 · Omakase",
+      "group": "日料",
+      "addr": "32 N Moore St, Tribeca",
+      "type_en": "Kappo · Omakase",
+      "img": "IMG_6022",
+      "extra_imgs": [
+        "kawabun-2"
+      ],
+      "lat": 40.719665,
+      "lng": -74.007695
+    },
+    {
+      "name": "Sushi by M",
+      "type": "寿司 · Omakase",
+      "group": "日料",
+      "addr": "300 E 5th St, East Village",
+      "type_en": "Sushi · Omakase",
+      "img": "IMG_6041",
+      "lat": 40.726573,
+      "lng": -73.988778
+    },
+    {
+      "name": "Hanamizuki Cafe",
+      "type": "饭团 · 抹茶绵绵冰",
+      "group": "日料",
+      "addr": "143 W 29th St, Chelsea",
+      "type_en": "Onigiri · matcha shaved ice",
+      "img": "IMG_6035",
+      "lat": 40.747538,
+      "lng": -73.991602
+    },
+    {
+      "name": "Uka Omakase",
+      "type": "寿司 · Omakase",
+      "group": "日料",
+      "addr": "238 E 60th St, Midtown East",
+      "type_en": "Sushi · Omakase",
+      "img": "uka-omakase",
+      "lat": 40.76139,
+      "lng": -73.964755
+    },
+    {
+      "name": "Flipper's",
+      "type": "日式舒芙蕾松饼 · brunch",
+      "group": "日料",
+      "addr": "337 W Broadway, SoHo",
+      "type_en": "Soufflé pancakes · brunch",
+      "img": "flippers",
+      "lat": 40.722409,
+      "lng": -74.003572
+    },
+    {
+      "name": "Osamil",
+      "type": "现代韩式 gastropub",
+      "group": "韩餐",
+      "addr": "5 W 31st St, Koreatown",
+      "type_en": "Modern Korean gastropub",
+      "img": "IMG_6002",
+      "extra_imgs": [
+        "osamil-2"
+      ],
+      "lat": 40.746979,
+      "lng": -73.986395
+    },
+    {
+      "name": "Jeju Noodle Bar",
+      "type": "韩式拉面 · 米其林一星",
+      "group": "韩餐",
+      "addr": "679 Greenwich St, West Village",
+      "type_en": "Korean noodles · 1 Michelin star",
+      "img": "IMG_6028",
+      "featured_rank": 4,
+      "lat": 40.733037,
+      "lng": -74.007343
+    },
+    {
+      "name": "Cho Dang Gol",
+      "type": "手工豆腐 · 炖锅",
+      "group": "韩餐",
+      "addr": "55 W 35th St, Koreatown",
+      "type_en": "Handmade tofu · stew",
+      "img": "IMG_6037",
+      "lat": 40.750171,
+      "lng": -73.986344
+    },
+    {
+      "name": "Oncheon",
+      "type": "韩式涮涮锅",
+      "group": "韩餐",
+      "addr": "312 5th Ave, Koreatown",
+      "type_en": "Korean shabu-shabu",
+      "img": "IMG_6052",
+      "lat": 40.747066,
+      "lng": -73.985973
+    },
+    {
+      "name": "Pocha 32",
+      "type": "布帐马车 · 下酒菜",
+      "group": "韩餐",
+      "addr": "15 W 32nd St, Koreatown",
+      "type_en": "Pojangmacha · drinking snacks",
+      "img": "IMG_6072",
+      "lat": 40.747506,
+      "lng": -73.986095
+    },
+    {
+      "name": "Kisa",
+      "type": "韩式套餐 · 小菜",
+      "group": "韩餐",
+      "addr": "205 Allen St, Lower East Side",
+      "type_en": "Korean set · banchan",
+      "img": "IMG_6058",
+      "lat": 40.719175,
+      "lng": -73.990246
+    },
+    {
+      "name": "Ariari",
+      "type": "韩式 · 釜山港口风味（米其林推介）",
+      "group": "韩餐",
+      "addr": "119 First Ave, East Village",
+      "type_en": "Korean · Busan port flavors (Michelin)",
+      "img": "ariari",
+      "lat": 40.7271,
+      "lng": -73.9856
+    },
+    {
+      "name": "8282",
+      "type": "现代韩式小食 · anju bar",
+      "group": "韩餐",
+      "addr": "84 Stanton St, Lower East Side",
+      "type_en": "Modern Korean small plates · anju bar",
+      "img": "v8282",
+      "lat": 40.720354,
+      "lng": -73.984851
+    },
+    {
+      "name": "西塔 Xita BBQ",
+      "type": "东北 / 朝鲜族烤肉",
+      "group": "中餐",
+      "addr": "813 8th Ave, Manhattan",
+      "type_en": "Northeastern / Korean-Chinese BBQ",
+      "img": "IMG_6017",
+      "lat": 40.761592,
+      "lng": -73.986734
+    },
+    {
+      "name": "豆捞坊 The Dolar Shop",
+      "type": "单人小火锅",
+      "group": "中餐",
+      "addr": "55 3rd Ave, East Village",
+      "type_en": "Individual hot pot",
+      "img": "IMG_5993",
+      "lat": 40.731105,
+      "lng": -73.988545
+    },
+    {
+      "name": "山城码头 Shan Cheng Wharf",
+      "type": "川渝火锅 · 海鲜",
+      "group": "中餐",
+      "addr": "6324 Fort Hamilton Pkwy, Dyker Heights",
+      "type_en": "Sichuan-Chongqing hot pot · seafood",
+      "img": "IMG_5998",
+      "lat": 40.631318,
+      "lng": -74.008503
+    },
+    {
+      "name": "Spicy Village",
+      "type": "河南手工烩面 · 辣村",
+      "group": "中餐",
+      "addr": "68B Forsyth St, Chinatown",
+      "type_en": "Henan hand-pulled noodles",
+      "img": "IMG_6043",
+      "lat": 40.717007,
+      "lng": -73.993396
+    },
+    {
+      "name": "重庆老灶 Chongqing Lao Zao",
+      "type": "重庆老灶火锅",
+      "group": "中餐",
+      "addr": "37-04 Prince St, Flushing",
+      "type_en": "Chongqing old-stove hot pot",
+      "img": "chongqing-laozao",
+      "lat": 40.760646,
+      "lng": -73.833045
+    },
+    {
+      "name": "Fish Village",
+      "type": "粤式海鲜 · 帝王蟹",
+      "group": "中餐",
+      "addr": "20-07 127th St, College Point",
+      "type_en": "Cantonese seafood · king crab",
+      "img": "IMG_6057",
+      "lat": 40.785212,
+      "lng": -73.841196
+    },
+    {
+      "name": "Boucherie",
+      "type": "法式 brasserie · 牛排",
+      "group": "法餐",
+      "addr": "99 7th Ave South, West Village",
+      "type_en": "French brasserie · steak",
+      "img": "IMG_5985",
+      "featured_rank": 13,
+      "lat": 40.733054,
+      "lng": -74.0029
+    },
+    {
+      "name": "Buvette",
+      "type": "法式 bistro · brunch",
+      "group": "法餐",
+      "addr": "42 Grove St, West Village",
+      "type_en": "French bistro · brunch",
+      "img": "IMG_6036",
+      "lat": 40.732572,
+      "lng": -74.004283
+    },
+    {
+      "name": "Tocqueville",
+      "type": "法式美式 · omakase（15EAST @ Tocqueville）",
+      "group": "法餐",
+      "addr": "1 E 15th St, Union Square",
+      "type_en": "French-American · omakase (15EAST @ Tocqueville)",
+      "img": "tocqueville",
+      "lat": 40.736617,
+      "lng": -73.992722
+    },
+    {
+      "name": "Piccola Cucina Uptown",
+      "type": "西西里意餐",
+      "group": "意餐",
+      "addr": "106 E 60th St, Upper East Side",
+      "type_en": "Sicilian Italian",
+      "img": "IMG_6012",
+      "extra_imgs": [
+        "piccola-2"
+      ],
+      "lat": 40.763166,
+      "lng": -73.969037
+    },
+    {
+      "name": "L'industrie Pizzeria",
+      "type": "披萨",
+      "group": "意餐",
+      "addr": "104 Christopher St, West Village",
+      "type_en": "Pizza",
+      "img": "IMG_6067",
+      "lat": 40.733206,
+      "lng": -74.004938
+    },
+    {
+      "name": "The Lobster Place",
+      "type": "海鲜市场 · 生食吧",
+      "group": "海鲜",
+      "addr": "Chelsea Market, 75 9th Ave",
+      "type_en": "Seafood market · raw bar",
+      "img": "IMG_6034",
+      "lat": 40.742051,
+      "lng": -74.004897
+    },
+    {
+      "name": "Penny",
+      "type": "生蚝 · 生食吧",
+      "group": "海鲜",
+      "addr": "90 E 10th St, East Village",
+      "type_en": "Oysters · raw bar",
+      "img": "IMG_6069",
+      "lat": 40.730806,
+      "lng": -73.989727
+    },
+    {
+      "name": "Maison Premiere",
+      "type": "生蚝吧 · 鸡尾酒",
+      "group": "海鲜",
+      "addr": "298 Bedford Ave, Williamsburg",
+      "type_en": "Oyster bar · cocktails",
+      "img": "IMG_6029",
+      "featured_rank": 9,
+      "lat": 40.714259,
+      "lng": -73.961651
+    },
+    {
+      "name": "Tomiño – Taberna Gallega",
+      "type": "西班牙加利西亚海鲜",
+      "group": "海鲜",
+      "addr": "192 Grand St, Little Italy",
+      "type_en": "Galician Spanish seafood",
+      "img": "IMG_6049",
+      "lat": 40.719458,
+      "lng": -73.996902
+    },
+    {
+      "name": "Le Sia",
+      "type": "中式 Cajun 海鲜煲",
+      "group": "海鲜",
+      "addr": "651 9th Ave, Hell's Kitchen",
+      "type_en": "Chinese-Cajun seafood boil",
+      "img": "le-sia",
+      "featured_rank": 10,
+      "lat": 40.760743,
+      "lng": -73.991283
+    },
+    {
+      "name": "Club A Steakhouse",
+      "type": "牛排馆",
+      "group": "美式",
+      "addr": "240 E 58th St, Midtown East",
+      "type_en": "Steakhouse",
+      "img": "IMG_6027",
+      "lat": 40.762751,
+      "lng": -73.971351
+    },
+    {
+      "name": "The Loeb Boathouse",
+      "type": "新美式 · 湖畔餐厅",
+      "group": "美式",
+      "addr": "Central Park",
+      "type_en": "New American · lakeside",
+      "img": "IMG_5990",
+      "featured_rank": 6,
+      "lat": 40.782773,
+      "lng": -73.965363,
+      "view": 1
+    },
+    {
+      "name": "Duane Park",
+      "type": "南方菜 · burlesque 晚宴秀",
+      "group": "美式",
+      "addr": "308 Bowery, NoHo",
+      "type_en": "Southern · burlesque dinner show",
+      "img": "IMG_5982",
+      "lat": 40.724889,
+      "lng": -73.992611
+    },
+    {
+      "name": "Harriet's Rooftop & Lounge",
+      "type": "屋顶酒廊 · 亚洲风小食",
+      "group": "美式",
+      "addr": "1 Hotel Brooklyn Bridge, Dumbo",
+      "type_en": "Rooftop lounge · Asian bites",
+      "img": "IMG_6005",
+      "lat": 40.702257,
+      "lng": -73.995551,
+      "view": 1
+    },
+    {
+      "name": "The Smith",
+      "type": "美式 brasserie",
+      "group": "美式",
+      "addr": "55 Third Ave, East Village（多家）",
+      "type_en": "American brasserie",
+      "img": "the-smith",
+      "lat": 40.72967,
+      "lng": -73.98967
+    },
+    {
+      "name": "ONE Dine",
+      "type": "新美式 · 观景台餐厅",
+      "group": "美式",
+      "addr": "One World Observatory, FiDi",
+      "type_en": "New American · observatory",
+      "img": "one-dine",
+      "featured_rank": 7,
+      "lat": 40.712843,
+      "lng": -74.013371,
+      "view": 1
+    },
+    {
+      "name": "RH Rooftop",
+      "type": "屋顶餐厅 · 时令美式",
+      "group": "美式",
+      "addr": "9 9th Ave, Meatpacking",
+      "type_en": "Rooftop · seasonal American",
+      "img": "rh-rooftop",
+      "featured_rank": 8,
+      "lat": 40.739998,
+      "lng": -74.006519,
+      "view": 1
+    },
+    {
+      "name": "Felix Roasting Co",
+      "type": "精品咖啡 · café",
+      "group": "美式",
+      "addr": "450 Park Ave South, NoMad（多家）",
+      "type_en": "Specialty coffee · café",
+      "img": "felix-roasting",
+      "lat": 40.739576,
+      "lng": -73.986878
+    },
+    {
+      "name": "Nerai",
+      "type": "希腊菜 · 海鲜",
+      "group": "各国",
+      "addr": "55 E 54th St, Midtown East",
+      "type_en": "Greek · seafood",
+      "img": "IMG_5978",
+      "lat": 40.76025,
+      "lng": -73.973041
+    },
+    {
+      "name": "Mari Vanna",
+      "type": "俄罗斯家常菜",
+      "group": "各国",
+      "addr": "41 E 20th St, Flatiron",
+      "type_en": "Russian home cooking",
+      "img": "IMG_6016",
+      "lat": 40.738869,
+      "lng": -73.988512
+    },
+    {
+      "name": "Smør",
+      "type": "丹麦 / 北欧 · brunch",
+      "group": "各国",
+      "addr": "441 E 12th St, East Village",
+      "type_en": "Danish / Nordic · brunch",
+      "img": "IMG_5999",
+      "lat": 40.729275,
+      "lng": -73.981529
+    },
+    {
+      "name": "Dudley's",
+      "type": "澳式全日 café · brunch",
+      "group": "各国",
+      "addr": "85 Orchard St, Lower East Side",
+      "type_en": "Aussie all-day café · brunch",
+      "img": "IMG_6018",
+      "lat": 40.71808,
+      "lng": -73.990366
+    },
+    {
+      "name": "Los Tacos No.1",
+      "type": "墨西哥 taco",
+      "group": "各国",
+      "addr": "75 9th Ave, Chelsea Market",
+      "type_en": "Mexican tacos",
+      "img": "IMG_6070",
+      "lat": 40.742051,
+      "lng": -74.004897
+    },
+    {
+      "name": "V{IV} Bar & Restaurant",
+      "type": "泰国菜",
+      "group": "各国",
+      "addr": "717 9th Ave, Hell's Kitchen",
+      "type_en": "Thai",
+      "img": "IMG_6015",
+      "lat": 40.762822,
+      "lng": -73.98982
+    },
+    {
+      "name": "Tara Kitchen",
+      "type": "摩洛哥菜",
+      "group": "各国",
+      "addr": "253 Church St, Tribeca",
+      "type_en": "Moroccan",
+      "img": "tara-kitchen",
+      "lat": 40.717874,
+      "lng": -74.005325
+    },
+    {
+      "name": "Tong",
+      "type": "现代泰餐 · 鸡尾酒",
+      "group": "各国",
+      "addr": "321 Starr St, Bushwick",
+      "type_en": "Modern Thai · cocktails",
+      "img": "tong-brooklyn",
+      "lat": 40.707763,
+      "lng": -73.920644
+    },
+    {
+      "name": "Nudibranch",
+      "type": "韩西融合小食 · 葡萄酒",
+      "group": "各国",
+      "addr": "125 First Ave, East Village",
+      "type_en": "Korean-Spanish small plates · wine",
+      "img": "nudibranch",
+      "lat": 40.7274,
+      "lng": -73.9856
+    },
+    {
+      "name": "Dante West Village",
+      "type": "意式小食 · aperitivo · 鸡尾酒",
+      "group": "酒吧",
+      "addr": "51 Bank St, West Village",
+      "type_en": "Italian bites · aperitivo · cocktails",
+      "img": "IMG_6066",
+      "extra_imgs": [
+        "dante-2"
+      ],
+      "lat": 40.736904,
+      "lng": -74.003888
+    },
+    {
+      "name": "Double Chicken Please",
+      "type": "鸡尾酒吧 · 炸鸡小食",
+      "group": "酒吧",
+      "addr": "115 Allen St, Lower East Side",
+      "type_en": "Cocktail bar · fried chicken",
+      "img": "IMG_6050",
+      "lat": 40.719613,
+      "lng": -73.99061
+    },
+    {
+      "name": "Katana Kitten",
+      "type": "日式风鸡尾酒吧",
+      "group": "酒吧",
+      "addr": "531 Hudson St, West Village",
+      "type_en": "Japanese-style cocktail bar",
+      "img": "IMG_6063",
+      "lat": 40.734248,
+      "lng": -74.00645
+    },
+    {
+      "name": "Dear Irving",
+      "type": "鸡尾酒吧 · lounge",
+      "group": "酒吧",
+      "addr": "55 Irving Pl, Gramercy",
+      "type_en": "Cocktail bar · lounge",
+      "img": "IMG_6073",
+      "lat": 40.737347,
+      "lng": -73.986332
+    },
+    {
+      "name": "PHD Rooftop",
+      "type": "屋顶吧",
+      "group": "酒吧",
+      "addr": "355 W 16th St, Dream Downtown",
+      "type_en": "Rooftop bar",
+      "img": "IMG_6006",
+      "lat": 40.742293,
+      "lng": -74.003303,
+      "view": 1
+    },
+    {
+      "name": "The Fleur Room",
+      "type": "屋顶 lounge · 夜店",
+      "group": "酒吧",
+      "addr": "105 W 28th St, Moxy Chelsea",
+      "type_en": "Rooftop lounge · club",
+      "img": "IMG_6078",
+      "lat": 40.746474,
+      "lng": -73.990946,
+      "view": 1
+    },
+    {
+      "name": "The Dead Rabbit",
+      "type": "爱尔兰酒吧 · 精酿鸡尾酒",
+      "group": "酒吧",
+      "addr": "30 Water St, Financial District",
+      "type_en": "Irish pub · craft cocktails",
+      "img": "dead-rabbit",
+      "extra_imgs": [
+        "dead-rabbit-2"
+      ],
+      "featured_rank": 5,
+      "lat": 40.703276,
+      "lng": -74.011016
+    },
+    {
+      "name": "Sip & Guzzle",
+      "type": "双层鸡尾酒吧 · 日式",
+      "group": "酒吧",
+      "addr": "29 Cornelia St, West Village",
+      "type_en": "Bi-level cocktail bar · Japanese",
+      "img": "sip-guzzle",
+      "lat": 40.731415,
+      "lng": -74.002447
+    },
+    {
+      "name": "Bar Adore",
+      "type": "日式 listening bar · 蛋包饭",
+      "group": "酒吧",
+      "addr": "320 E 6th St, East Village",
+      "type_en": "Japanese listening bar · omurice",
+      "img": "bar-adore",
+      "lat": 40.726817,
+      "lng": -73.987575
+    },
+    {
+      "name": "Barbam",
+      "type": "韩式风鸡尾酒吧 · speakeasy",
+      "group": "酒吧",
+      "addr": "32 W 33rd St, Koreatown",
+      "type_en": "Korean-style cocktail bar · speakeasy",
+      "img": "barbam",
+      "lat": 40.751182,
+      "lng": -73.993127
+    },
+    {
+      "name": "George Bang Bang",
+      "type": "隐藏 speakeasy 鸡尾酒吧",
+      "group": "酒吧",
+      "addr": "13 E 30th St, NoMad",
+      "type_en": "Hidden speakeasy cocktail bar",
+      "img": "george-bangbang",
+      "lat": 40.745709,
+      "lng": -73.985358
+    },
+    {
+      "name": "Westlight",
+      "type": "屋顶鸡尾酒吧",
+      "group": "酒吧",
+      "addr": "111 N 12th St, Williamsburg",
+      "type_en": "Rooftop cocktail bar",
+      "img": "westlight",
+      "featured_rank": 12,
+      "lat": 40.722412,
+      "lng": -73.956922,
+      "view": 1
+    },
+    {
+      "name": "Daniel",
+      "type": "法式 fine dining · 米其林二星",
+      "group": "法餐",
+      "addr": "60 E 65th St, Upper East Side",
+      "type_en": "French fine dining · 2 Michelin stars",
+      "img": "daniel",
+      "lat": 40.766778,
+      "lng": -73.967571
+    },
+    {
+      "name": "Le Jardin Bistro",
+      "type": "法式小酒馆",
+      "group": "法餐",
+      "addr": "95 Delancey St, Lower East Side",
+      "type_en": "French bistro",
+      "img": "lejardin",
+      "lat": 40.718624,
+      "lng": -73.989282
+    },
+    {
+      "name": "Il Corallo Trattoria",
+      "type": "意式 trattoria · 手工意面",
+      "group": "意餐",
+      "addr": "176 Prince St, SoHo",
+      "type_en": "Italian trattoria · handmade pasta",
+      "img": "ilcorallo",
+      "lat": 40.726182,
+      "lng": -74.00192
+    },
+    {
+      "name": "Meduza Mediterrania",
+      "type": "地中海 · 牛排",
+      "group": "各国",
+      "addr": "657 Hudson St, West Village",
+      "type_en": "Mediterranean · steak",
+      "img": "meduza",
+      "lat": 40.736727,
+      "lng": -74.005699
+    },
+    {
+      "name": "Oti",
+      "type": "罗马尼亚菜",
+      "group": "各国",
+      "addr": "15 Essex St, Lower East Side",
+      "type_en": "Romanian",
+      "img": "oti",
+      "lat": 40.71521,
+      "lng": -73.99023
+    },
+    {
+      "name": "Saigon Social",
+      "type": "越南菜",
+      "group": "各国",
+      "addr": "172 Orchard St, Lower East Side",
+      "type_en": "Vietnamese",
+      "img": "saigon",
+      "lat": 40.716287,
+      "lng": -73.99118
+    },
+    {
+      "name": "Sabai Thai",
+      "type": "泰国菜",
+      "group": "各国",
+      "addr": "432 Park Ave S, NoMad",
+      "type_en": "Thai",
+      "img": "sabai",
+      "lat": 40.740497,
+      "lng": -73.986064
+    },
+    {
+      "name": "Jora",
+      "type": "秘鲁菜",
+      "group": "各国",
+      "addr": "47-46 11th St, Long Island City, Queens",
+      "type_en": "Peruvian",
+      "img": "jora",
+      "lat": 40.743823,
+      "lng": -73.951529
+    },
+    {
+      "name": "Sarabeth's",
+      "type": "美式早午餐",
+      "group": "美式",
+      "addr": "40 Central Park S, Midtown（多家）",
+      "type_en": "American brunch",
+      "img": "sarabeths",
+      "lat": 40.764412,
+      "lng": -73.973349
+    },
+    {
+      "name": "Paper Coffee",
+      "type": "精品咖啡（MADE Hotel）",
+      "group": "美式",
+      "addr": "44 W 29th St, NoMad",
+      "type_en": "Specialty coffee (MADE Hotel)",
+      "img": "papercoffee",
+      "lat": 40.746139,
+      "lng": -73.989059
+    },
+    {
+      "name": "Le Bain at The Standard",
+      "type": "屋顶派对吧 · disco",
+      "group": "酒吧",
+      "addr": "The Standard, 444 W 13th St, Meatpacking",
+      "type_en": "Rooftop party bar · disco",
+      "img": "lebain",
+      "lat": 40.740742,
+      "lng": -74.00827,
+      "view": 1
+    },
+    {
+      "name": "Somewhere Nowhere",
+      "type": "屋顶酒吧 · 泳池夜店",
+      "group": "酒吧",
+      "addr": "112 W 25th St, Chelsea",
+      "type_en": "Rooftop bar · pool club",
+      "img": "somewherenowhere",
+      "lat": 40.744309,
+      "lng": -73.992738,
+      "view": 1
+    },
+    {
+      "name": "Sid Gold's Request Room",
+      "type": "钢琴吧 · 点唱",
+      "group": "酒吧",
+      "addr": "165 W 26th St, Chelsea",
+      "type_en": "Piano request bar",
+      "img": "sidgolds",
+      "lat": 40.745951,
+      "lng": -73.993585
+    },
+    {
+      "name": "ILIS",
+      "type": "北欧 fine dining · 前 Noma 主厨",
+      "group": "各国",
+      "addr": "150 Green St, Greenpoint, Brooklyn",
+      "type_en": "Nordic fine dining · ex-Noma chef",
+      "img": "ilis",
+      "lat": 40.733561,
+      "lng": -73.955862
+    },
+    {
+      "name": "Locanda Verde",
+      "type": "意式 · Greenwich Hotel",
+      "group": "意餐",
+      "addr": "377 Greenwich St, Tribeca",
+      "type_en": "Italian · Greenwich Hotel",
+      "img": "locandaverde",
+      "lat": 40.719878,
+      "lng": -74.010019
+    },
+    {
+      "name": "Olio e Più",
+      "type": "意式 · 披萨 · 意面",
+      "group": "意餐",
+      "addr": "3 Greenwich Ave, Greenwich Village",
+      "type_en": "Italian · pizza · pasta",
+      "img": "olioepiu",
+      "lat": 40.733794,
+      "lng": -73.999775
+    },
+    {
+      "name": "Petite Boucherie",
+      "type": "法式小酒馆",
+      "group": "法餐",
+      "addr": "14 Christopher St, West Village",
+      "type_en": "French bistro",
+      "img": "petiteboucherie",
+      "lat": 40.733878,
+      "lng": -74.000437
+    },
+    {
+      "name": "La Pecora Bianca",
+      "type": "意式 · 手工意面",
+      "group": "意餐",
+      "addr": "1133 Broadway, NoMad（多家）",
+      "type_en": "Italian · handmade pasta",
+      "img": "lapecorabianca",
+      "lat": 40.743576,
+      "lng": -73.989244
+    },
+    {
+      "name": "Cafe Habana",
+      "type": "古巴墨西哥菜",
+      "group": "各国",
+      "addr": "17 Prince St, Nolita",
+      "type_en": "Cuban-Mexican",
+      "img": "cafehabana",
+      "lat": 40.722845,
+      "lng": -73.994228
+    },
+    {
+      "name": "Oregano",
+      "type": "那不勒斯披萨 · 意面",
+      "group": "意餐",
+      "addr": "102 Berry St, Williamsburg, Brooklyn",
+      "type_en": "Neapolitan pizza · pasta",
+      "img": "oregano",
+      "lat": 40.71909,
+      "lng": -73.958676
+    },
+    {
+      "name": "Dino",
+      "type": "意式 trattoria · 酒单",
+      "group": "意餐",
+      "addr": "222 DeKalb Ave, Fort Greene, Brooklyn",
+      "type_en": "Italian trattoria · wine list",
+      "img": "dino",
+      "lat": 40.689371,
+      "lng": -73.970477
+    },
+    {
+      "name": "TALEA Beer Co.",
+      "type": "精酿啤酒厂 · taproom",
+      "group": "酒吧",
+      "addr": "102 Christopher St, West Village",
+      "type_en": "Craft brewery · taproom",
+      "img": "talea",
+      "lat": 40.733194,
+      "lng": -74.004862
+    },
+    {
+      "name": "Yawning Cobra",
+      "type": "日式风鸡尾酒吧",
+      "group": "酒吧",
+      "addr": "356 Bowery, NoHo（多家）",
+      "type_en": "Japanese-style cocktail bar",
+      "img": "yawningcobra",
+      "lat": 40.726919,
+      "lng": -73.991953
+    },
+    {
+      "name": "Da Long Yi Hot Pot",
+      "type": "川渝火锅",
+      "group": "中餐",
+      "addr": "42-22 Crescent St, Long Island City, Queens",
+      "type_en": "Sichuan-Chongqing hot pot",
+      "img": "dalongyi",
+      "lat": 40.750167,
+      "lng": -73.941351
+    },
+    {
+      "name": "Casa Mono",
+      "type": "西班牙 tapas · 米其林一星",
+      "group": "各国",
+      "addr": "52 Irving Pl, Gramercy",
+      "type_en": "Spanish tapas · 1 Michelin star",
+      "img": "casamono",
+      "featured_rank": 0,
+      "lat": 40.737347,
+      "lng": -73.986332
+    },
+    {
+      "name": "Nami Nori",
+      "type": "开放式手卷 temaki",
+      "group": "日料",
+      "addr": "33 Carmine St, West Village（多家）",
+      "type_en": "Open-style temaki handrolls",
+      "img": "naminori",
+      "featured_rank": 1,
+      "lat": 40.730263,
+      "lng": -74.003294
+    },
+    {
+      "name": "Ai Ki Ya",
+      "type": "寿喜烧 · 棉花糖锅",
+      "group": "日料",
+      "addr": "41 W 33rd St, Koreatown",
+      "type_en": "Sukiyaki · cotton-candy pot",
+      "img": "aikiya",
+      "lat": 40.751182,
+      "lng": -73.993127
+    },
+    {
+      "name": "Farra",
+      "type": "意式小酒馆 · 葡萄酒吧",
+      "group": "意餐",
+      "addr": "71 Worth St, Tribeca",
+      "type_en": "Italian bistro · wine bar",
+      "img": "farra",
+      "lat": 40.717044,
+      "lng": -74.00593
+    },
+    {
+      "name": "Tomi Jazz",
+      "type": "日式 jazz bar · 蛋包饭",
+      "group": "酒吧",
+      "addr": "239 E 53rd St, Midtown East",
+      "type_en": "Japanese jazz bar · omurice",
+      "img": "tomijazz",
+      "featured_rank": 2,
+      "lat": 40.758621,
+      "lng": -73.971573
+    },
+    {
+      "name": "Bateaux New York",
+      "type": "哈德逊河晚宴游船 · live band",
+      "group": "美式",
+      "addr": "Pier 61, Chelsea Piers",
+      "type_en": "Hudson dinner cruise · live band",
+      "img": "bateaux",
+      "featured_rank": 3,
+      "lat": 40.7484,
+      "lng": -74.0103,
+      "view": 1
+    },
+    {
+      "name": "Smalls Jazz Club",
+      "type": "地下爵士俱乐部",
+      "group": "酒吧",
+      "addr": "183 W 10th St, West Village",
+      "type_en": "Basement jazz club",
+      "img": "smalls",
+      "lat": 40.734388,
+      "lng": -74.002703
+    },
+    {
+      "name": "Caravan Uyghur Cuisine",
+      "type": "维吾尔菜 · 烤串拉条子",
+      "group": "各国",
+      "addr": "60 Beaver St, FiDi",
+      "img": "caravan",
+      "lat": 40.705126,
+      "lng": -74.009617
+    },
+    {
+      "name": "VESTRY",
+      "type": "现代美式 · The Dominick 酒店",
+      "group": "美式",
+      "addr": "246 Spring St, SoHo",
+      "type_en": "Modern American · The Dominick Hotel",
+      "img": "vestry",
+      "lat": 40.723599,
+      "lng": -73.999967
+    }
+  ]
+}

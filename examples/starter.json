@@ -1,0 +1,44 @@
+{
+  "config": {
+    "site_title": "Your City 100 · 城市好吃榜",
+    "brand_wordmark": "<em>Your</em> City 100",
+    "brand_sub": "· 城市好吃榜",
+    "site_url": "https://your-city-100.netlify.app/",
+    "og_image": "https://your-city-100.netlify.app/og.png",
+    "site_display_url": "your-city-100.netlify.app",
+    "share_link": "https://your-city-100.netlify.app",
+    "beehiiv_form_id": "YOUR-BEEHIIV-FORM-UUID",
+    "ig_url": "https://instagram.com/yourhandle",
+    "ig_handle": "@yourhandle",
+    "xhs_handle": "@your_xhs",
+    "caption_brand_zh": "我的城市好吃榜",
+    "caption_brand_en": "My City 100",
+    "groups": [
+      { "zh": "全部", "en": "All" },
+      { "zh": "日料", "en": "Japanese" },
+      { "zh": "中餐", "en": "Chinese" },
+      { "zh": "酒吧", "en": "Bars" }
+    ]
+  },
+  "venues": [
+    {
+      "name": "Example Omakase",
+      "type": "寿司 · Omakase",
+      "type_en": "Sushi · Omakase",
+      "group": "日料",
+      "addr": "123 Example St, Downtown",
+      "img": "example-omakase",
+      "featured_rank": 0,
+      "lat": 40.7474,
+      "lng": -73.9968
+    },
+    {
+      "name": "Example Hot Pot",
+      "type": "川渝火锅",
+      "type_en": "Sichuan hot pot",
+      "group": "中餐",
+      "addr": "456 Sample Ave, Midtown",
+      "img": "example-hotpot"
+    }
+  ]
+}
