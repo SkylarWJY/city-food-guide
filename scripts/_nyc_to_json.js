@@ -45,7 +45,10 @@ const config = {
   beehiiv_form_id: "460499a5-dbab-4eab-9fcc-8bc9edcdf3b2",
   ig_url: "https://instagram.com/skylarwjy",
   ig_handle: "@skylarwjy",
+  xhs_url: "https://xhslink.com/m/8QM3DnmS1H9",
   xhs_handle: "@Skylar创业版",
+  mymaps_url: "https://www.google.com/maps/d/viewer?mid=14g-pKJngHBuC5DfcF_-f3geqFZmXOQg",
+  pdf_url: "Skylar-NYC-100.pdf",
   caption_brand_zh: "Skylar 私藏纽约好吃榜",
   caption_brand_en: "Skylar's NYC 100",
   groups: groupZh.map(zh => ({ zh, en: groupEn[zh] || zh }))

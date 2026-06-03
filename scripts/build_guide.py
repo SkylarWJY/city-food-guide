@@ -98,7 +98,11 @@ def main():
         "{{BRAND_SUB}}":         cfg.get("brand_sub", ""),
         "{{IG_URL}}":            cfg.get("ig_url", "#"),
         "{{IG_HANDLE}}":         cfg.get("ig_handle", ""),
+        "{{XHS_URL}}":           cfg.get("xhs_url", "#"),
         "{{XHS_HANDLE}}":        cfg.get("xhs_handle", ""),
+        # lead-magnet links shown on the page right after subscribe (B-plan delivery)
+        "{{MYMAPS_URL}}":        cfg.get("mymaps_url", ""),
+        "{{PDF_URL}}":           cfg.get("pdf_url", ""),
         "{{CAPTION_BRAND_ZH}}":  cfg.get("caption_brand_zh", cfg.get("site_title", "")),
         "{{CAPTION_BRAND_EN}}":  cfg.get("caption_brand_en", cfg.get("site_title", "")),
     }

@@ -28,6 +28,13 @@ A static, dependency-free `index.html` with:
 - **Interactive Leaflet map** with cuisine-colored pins (only venues that have
   lat/lng appear).
 - **Email-capture gate** via an embedded beehiiv subscribe form.
+- **Instant lead-magnet delivery** — after subscribing, beehiiv redirects back with a
+  `?sub_id=…`; the page latches that into localStorage (and cleans the URL), then swaps the
+  signup form for an "unlocked" panel linking the Google My Maps (`mymaps_url`) + PDF
+  (`pdf_url`). No paid beehiiv automation needed — the value lands on-page, instantly.
+- **"Buy me a coffee" follow gag** — a tip button that, on click, flips to a playful
+  "just kidding — follow me ❤️" and opens your 小红书 (`xhs_url`). Degrades to a plain link
+  without JS.
 - **End-cap CTA tile** that fills the orphaned last grid cell.
 
 ![demo](assets/demo.png)
@@ -46,7 +53,9 @@ A static, dependency-free `index.html` with:
     "share_link":       "https://skylar-nyc-100.netlify.app",
     "beehiiv_form_id":  "460499a5-…",                       // embedded subscribe form
     "ig_url": "https://instagram.com/skylarwjy", "ig_handle": "@skylarwjy",
-    "xhs_handle": "@Skylar创业版",
+    "xhs_url": "https://xhslink.com/m/…", "xhs_handle": "@Skylar创业版",  // xhs_url = "buy me a coffee" target
+    "mymaps_url": "https://www.google.com/maps/d/viewer?mid=…",  // unlocked after subscribe
+    "pdf_url": "Skylar-NYC-100.pdf",                            // unlocked after subscribe (site-root path or full URL)
     "caption_brand_zh": "Skylar 私藏纽约好吃榜",
     "caption_brand_en": "Skylar's NYC 100",
     "groups": [ {"zh":"全部","en":"All"}, {"zh":"日料","en":"Japanese"}, … ]

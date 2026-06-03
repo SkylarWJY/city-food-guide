@@ -39,6 +39,9 @@ sub_once(r"const GEO = \{.*?\};", "const GEO = {{GEO_JSON}};", "GEO")
 # --- deploy-specific strings ---
 sub_once(r"const SHARE_LINK='[^']*';", "const SHARE_LINK='{{SHARE_LINK}}';", "SHARE_LINK")
 sub_once(r'data-beehiiv-form="[^"]*"', 'data-beehiiv-form="{{BEEHIIV_FORM_ID}}"', "beehiiv id")
+# lead-magnet links delivered on the page right after subscribe
+sub_once(r'const MYMAPS_URL="[^"]*";', 'const MYMAPS_URL="{{MYMAPS_URL}}";', "MYMAPS_URL")
+sub_once(r'const PDF_URL="[^"]*";', 'const PDF_URL="{{PDF_URL}}";', "PDF_URL")
 
 # --- brand / identity strings (replace ALL occurrences; order matters) ---
 def repl_all(old, new, label):
@@ -56,6 +59,7 @@ repl_all("skylar-nyc-100.netlify.app", "{{SITE_DISPLAY_URL}}", "SITE_DISPLAY_URL
 repl_all("<em>Skylar's</em> NYC 100", "{{BRAND_WORDMARK}}", "BRAND_WORDMARK")
 repl_all("· 纽约好吃榜", "{{BRAND_SUB}}", "BRAND_SUB")
 repl_all("https://instagram.com/skylarwjy", "{{IG_URL}}", "IG_URL")
+repl_all("https://xhslink.com/m/8QM3DnmS1H9", "{{XHS_URL}}", "XHS_URL")
 repl_all("@skylarwjy", "{{IG_HANDLE}}", "IG_HANDLE")
 repl_all("@Skylar创业版", "{{XHS_HANDLE}}", "XHS_HANDLE")
 # caption brand phrases (inside JS template literals)

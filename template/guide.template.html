@@ -123,6 +123,27 @@ h1 .g{background:linear-gradient(105deg,var(--text) 28%,var(--accent) 72%,var(--
 .unlock-txt p{margin-top:6px; font-size:13.5px; color:var(--muted); line-height:1.5}
 .unlock-form{flex:1 1 300px; min-width:260px; max-width:440px; height:140px; overflow:hidden; display:flex; align-items:center}
 .unlock-form iframe{width:100%!important; border:0!important}
+.unlock-form:has(#unlockedPanel:not([hidden])){height:auto; overflow:visible}
+.unlocked{width:100%}
+.ul-btns{display:flex; flex-wrap:wrap; gap:10px}
+.ul-btn{flex:1 1 160px; text-align:center; padding:12px 16px; border-radius:12px; font-size:14px; font-weight:680;
+  border:1px solid var(--border); background:var(--card-bg); color:var(--text); text-decoration:none; white-space:nowrap;
+  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+.ul-btn:hover{transform:translateY(-1px); box-shadow:var(--shadow); border-color:var(--border-strong)}
+.ul-primary{border:0; color:#fff; background:linear-gradient(100deg,var(--accent),var(--accent-2)); box-shadow:0 8px 22px -10px rgba(239,93,52,.7)}
+.ul-primary:hover{border:0}
+.ul-hint{margin-top:11px; font-size:12px; color:var(--muted); line-height:1.5}
+.coffee{max-width:1240px; margin:10px auto 0; padding:0 24px; text-align:center}
+.coffee-btn{display:inline-flex; align-items:center; gap:10px; padding:13px 26px; border-radius:100px;
+  font-size:15px; font-weight:720; letter-spacing:-.01em; color:#fff; text-decoration:none; cursor:pointer;
+  background:linear-gradient(100deg,var(--accent),var(--accent-2)); box-shadow:0 10px 26px -10px rgba(239,93,52,.75);
+  transition:transform .14s ease, box-shadow .14s ease}
+.coffee-btn:hover{transform:translateY(-2px) rotate(-1deg); box-shadow:0 16px 34px -12px rgba(239,93,52,.85)}
+.coffee-btn .coffee-emoji{font-size:18px; line-height:1}
+.coffee-btn.poked{animation:coffeePop .42s ease}
+@keyframes coffeePop{0%{transform:scale(1)}40%{transform:scale(1.09) rotate(-3deg)}100%{transform:scale(1) rotate(0)}}
+.coffee-sub{margin-top:10px; font-size:12.5px; color:var(--muted); line-height:1.5}
+@media(max-width:560px){ .coffee{padding:0 16px} }
 @media(max-width:760px){ .unlock{padding:0 16px} .unlock-in{padding:16px 18px; gap:10px} .unlock-txt h3{font-size:18px} }
 
 /* ===== floating follow bar ===== */
@@ -315,7 +336,7 @@ footer .foot-follow .tag{font-size:11px; font-weight:680; color:var(--accent); b
     <a class="iconbtn soc ig" id="igNav" href="{{IG_URL}}" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
     </a>
-    <a class="iconbtn soc xhs" id="xhsNav" href="https://xhslink.com/m/8QM3DnmS1H9" target="_blank" rel="noopener" aria-label="小红书" title="小红书 {{XHS_HANDLE}}"><span class="xhs-w">小红书</span></a>
+    <a class="iconbtn soc xhs" id="xhsNav" href="{{XHS_URL}}" target="_blank" rel="noopener" aria-label="小红书" title="小红书 {{XHS_HANDLE}}"><span class="xhs-w">小红书</span></a>
     <a class="iconbtn soc dy" id="dyNav" href="https://v.douyin.com/zj1b5VjiLxk/" target="_blank" rel="noopener" aria-label="抖音" title="抖音 Skylar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
     <button class="iconbtn" id="langBtn" aria-label="language">EN</button>
     <button class="iconbtn" id="themeBtn" aria-label="theme">
@@ -352,7 +373,16 @@ footer .foot-follow .tag{font-size:11px; font-weight:680; color:var(--accent); b
       <p id="unlockSub"></p>
     </div>
     <div class="unlock-form">
-      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="{{BEEHIIV_FORM_ID}}"></script>
+      <div id="gateForm" class="gate-form">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="{{BEEHIIV_FORM_ID}}"></script>
+      </div>
+      <div id="unlockedPanel" class="unlocked" hidden>
+        <div class="ul-btns">
+          <a id="mapBtn" class="ul-btn ul-primary" target="_blank" rel="noopener"></a>
+          <a id="pdfBtn" class="ul-btn" target="_blank" rel="noopener"></a>
+        </div>
+        <p id="unlockedHint" class="ul-hint"></p>
+      </div>
     </div>
   </div>
 </section>
@@ -373,13 +403,21 @@ footer .foot-follow .tag{font-size:11px; font-weight:680; color:var(--accent); b
   <div class="empty" id="empty" style="display:none"></div>
 </main>
 
+<section class="coffee" id="coffee">
+  <a class="coffee-btn" id="coffeeBtn" href="{{XHS_URL}}" target="_blank" rel="noopener">
+    <span class="coffee-emoji" aria-hidden="true">☕</span>
+    <span class="coffee-label" id="coffeeLabel"></span>
+  </a>
+  <p class="coffee-sub" id="coffeeSub"></p>
+</section>
+
 <footer>
   <span id="footMain"></span>
   <div class="foot-follow"><span class="tag" id="footTag"></span><span id="footFollow"></span></div>
   <div class="foot-soc">
     <a href="{{IG_URL}}" target="_blank" rel="noopener">Instagram {{IG_HANDLE}}</a>
     <span class="sep">·</span>
-    <a id="xhsFoot" href="https://xhslink.com/m/8QM3DnmS1H9" target="_blank" rel="noopener">小红书 {{XHS_HANDLE}}</a>
+    <a id="xhsFoot" href="{{XHS_URL}}" target="_blank" rel="noopener">小红书 {{XHS_HANDLE}}</a>
     <span class="sep">·</span>
     <a id="dyFoot" href="https://v.douyin.com/zj1b5VjiLxk/" target="_blank" rel="noopener">抖音 Skylar</a>
   </div>
@@ -394,7 +432,7 @@ footer .foot-follow .tag{font-size:11px; font-weight:680; color:var(--accent); b
     <a class="fb-btn ig" href="{{IG_URL}}" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
     </a>
-    <a class="fb-btn xhs" href="https://xhslink.com/m/8QM3DnmS1H9" target="_blank" rel="noopener" aria-label="小红书" title="小红书 {{XHS_HANDLE}}"><span class="xhs-w">小红书</span></a>
+    <a class="fb-btn xhs" href="{{XHS_URL}}" target="_blank" rel="noopener" aria-label="小红书" title="小红书 {{XHS_HANDLE}}"><span class="xhs-w">小红书</span></a>
     <a class="fb-btn dy" href="https://v.douyin.com/zj1b5VjiLxk/" target="_blank" rel="noopener" aria-label="抖音" title="抖音 Skylar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
   </div>
 </div>
@@ -424,7 +462,11 @@ const UI={
     viewTag:"风景", langBtn:"EN",
     tkLabel:"家已打卡", tkShare:"晒我的战绩", checkTip:"标记为已吃过", shareTip:"分享这家",
     unlockTitle:"把这份地图存进你手机", unlockSub:"网页随便看 —— 留个邮箱，我把全 100 家的 Google 地图（一键导航、可离线）＋ PDF 清单发给你，每月新店持续更新。",
+    unlockedTitle:"解锁成功！福利都在这", unlockedSub:"全 100 家的 Google 地图 ＋ 离线 PDF 清单都在下面，点开存进手机就行——每月新店我会更新地图，随时回来拿最新版。",
+    mapBtn:"📍 打开 Google 地图", pdfBtn:"📄 下载 PDF 清单",
+    unlockedHint:"小提示：打开地图后点右上角「☆ 保存到你的地图」，以后在 Google 地图 App 里随时调出来。",
     fbText:'我每月亲测加新店，<b>关注</b>第一时间看',
+    coffeeLabel:"请我喝杯咖啡", coffeeSub:"（其实……逗你玩的 😝 关注我就好啦 👉 小红书）", coffeePunch:"逗你玩的~关注我就好啦 ❤️",
     endcap:{k:"就这 100 家", t:"吃完了？才刚开始 🍜", s:"每月亲测加新店——关注，第一时间看更新。", links:["小红书","抖音","Instagram"]}},
   en:{brandSub:"· NYC Eats", search:"Search name / cuisine / area…",
     eyebrow:"SKYLAR'S PICKS · <b>100 tried & true</b> · updated monthly", h1a:"100 reasons", h1b:"to eat your way through NYC",
@@ -437,11 +479,34 @@ const UI={
     viewTag:"View", langBtn:"中",
     tkLabel:"checked in", tkShare:"Share my score", checkTip:"Mark as eaten", shareTip:"Share this spot",
     unlockTitle:"Save this map to your phone", unlockSub:"Browse free — drop your email and I'll send you the full 100 as a Google map (one-tap nav, works offline) + a PDF list, updated monthly.",
+    unlockedTitle:"Unlocked! Here's everything", unlockedSub:"The full 100 as a Google map + an offline PDF list are right below — open them and save to your phone. I update the map monthly, so come back anytime for the latest.",
+    mapBtn:"📍 Open the Google map", pdfBtn:"📄 Download the PDF",
+    unlockedHint:"Tip: once the map opens, tap “☆ Save to your maps” so it's always in your Google Maps app.",
     fbText:'I add new spots monthly — <b>follow</b> to see them first',
+    coffeeLabel:"Buy me a coffee", coffeeSub:"(jk… 😝 just follow me 👉 RED / 小红书)", coffeePunch:"Gotcha~ just follow me ❤️",
     endcap:{k:"THAT'S ALL 100",t:"Done? We're just getting started 🍜",s:"New spots added every month — follow to catch them first.",links:["小红书","Douyin","Instagram"]}}
 };
 const VIEW="风景";
 const UPDATED={zh:"2026 年 5 月", en:"May 2026"};  // bump this when you add new spots
+/* ===== lead-magnet links (delivered on the page right after subscribe) ===== */
+const MYMAPS_URL="{{MYMAPS_URL}}";
+const PDF_URL="{{PDF_URL}}";
+/* True once the visitor has subscribed. beehiiv redirects back with ?sub_id=… on success;
+   we latch that into localStorage and clean the URL so the unlock state sticks across visits. */
+function checkSubscribed(){
+  try{
+    const p=new URLSearchParams(location.search);
+    if(p.has('sub_id')){
+      localStorage.setItem('food100-subscribed','1');
+      p.delete('sub_id');
+      const qs=p.toString();
+      history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);
+    }
+  }catch(e){}
+  return localStorage.getItem('food100-subscribed')==='1';
+}
+let subscribed=checkSubscribed();
+let coffeePoked=false;
 let lang=localStorage.getItem('food100-lang')||'zh';
 let theme=localStorage.getItem('food100-theme')||'light';
 let active="全部", query="";
@@ -509,7 +574,7 @@ function placeEndcap(){
     <div class="ec-t">${ec.t||"就这 100 家 🍜"}</div>
     <div class="ec-s">${ec.s||"每月亲测加新店——关注，第一时间看更新。"}</div>
     <div class="ec-links">
-      <a href="https://xhslink.com/m/8QM3DnmS1H9" target="_blank" rel="noopener">${lk[0]}</a>
+      <a href="{{XHS_URL}}" target="_blank" rel="noopener">${lk[0]}</a>
       <a href="https://v.douyin.com/zj1b5VjiLxk/" target="_blank" rel="noopener">${lk[1]}</a>
       <a href="{{IG_URL}}" target="_blank" rel="noopener">${lk[2]}</a>
     </div>`;
@@ -758,8 +823,14 @@ function applyLang(){
   document.getElementById('empty').textContent=t.empty;
   document.getElementById('footMain').innerHTML=t.foot;
   document.getElementById('langBtn').textContent=t.langBtn;
-  document.getElementById('unlockTitle').textContent=t.unlockTitle;
-  document.getElementById('unlockSub').textContent=t.unlockSub;
+  document.getElementById('unlockTitle').textContent=subscribed?t.unlockedTitle:t.unlockTitle;
+  document.getElementById('unlockSub').textContent=subscribed?t.unlockedSub:t.unlockSub;
+  document.getElementById('gateForm').hidden=subscribed;
+  document.getElementById('unlockedPanel').hidden=!subscribed;
+  const mb=document.getElementById('mapBtn'), pb=document.getElementById('pdfBtn');
+  mb.textContent=t.mapBtn; mb.href=MYMAPS_URL;
+  pb.textContent=t.pdfBtn; pb.href=PDF_URL;
+  document.getElementById('unlockedHint').textContent=t.unlockedHint;
   document.getElementById('tkLabel').textContent=t.tkLabel;
   document.getElementById('tkShareLabel').textContent=t.tkShare;
   document.getElementById('freshBadge').textContent=t.freshBadge.replace('{d}',UPDATED[lang]||UPDATED.zh);
@@ -768,6 +839,8 @@ function applyLang(){
   document.getElementById('exTitle').textContent=MAPUI[lang].title;
   document.getElementById('exSub').textContent=MAPUI[lang].sub;
   document.getElementById('fbText').innerHTML=t.fbText;
+  if(!coffeePoked){ document.getElementById('coffeeLabel').textContent=t.coffeeLabel; }
+  document.getElementById('coffeeSub').textContent=t.coffeeSub;
   renderChips(); render(); updateTracker(); buildMapFilters();
 }
 function applyTheme(){
@@ -779,6 +852,14 @@ document.getElementById('langBtn').onclick=()=>{lang=lang==='zh'?'en':'zh';local
 document.getElementById('themeBtn').onclick=()=>{theme=theme==='light'?'dark':'light';localStorage.setItem('food100-theme',theme);applyTheme();setTiles();};
 document.getElementById('q').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();render();});
 document.getElementById('tkShare').onclick=genShareCard;
+/* ☕ "buy me a coffee" — the gag: it's a follow button in disguise. The <a> still opens 小红书
+   (works without JS / right-clickable); the handler just flips the label to the punchline. */
+document.getElementById('coffeeBtn').addEventListener('click',()=>{
+  coffeePoked=true;
+  const lbl=document.getElementById('coffeeLabel'), btn=document.getElementById('coffeeBtn');
+  lbl.textContent=UI[lang].coffeePunch;
+  btn.classList.remove('poked'); void btn.offsetWidth; btn.classList.add('poked');
+});
 document.getElementById('tkTotal').textContent=data.length;
 
 /* ===== Explore Map ===== */
