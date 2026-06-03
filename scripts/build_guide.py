@@ -27,6 +27,68 @@ import json, sys, pathlib
 def die(msg):
     print(f"build_guide: {msg}", file=sys.stderr); sys.exit(1)
 
+# ---- SEO / GEO: structured data + crawler files (drives Google rich results + AI-engine citations) ----
+def build_jsonld(cfg, venues):
+    site = cfg.get("site_url", "/").rstrip("/")
+    idb  = site if site.startswith("http") else ""
+    home = (idb + "/") if idb else "/"
+    loc  = cfg.get("locality", ""); reg = cfg.get("region", ""); ctry = cfg.get("country", "")
+    items = []
+    for i, v in enumerate(venues):
+        addr = {"@type": "PostalAddress", "streetAddress": v.get("addr", "")}
+        if loc:  addr["addressLocality"] = loc
+        if reg:  addr["addressRegion"]   = reg
+        if ctry: addr["addressCountry"]  = ctry
+        r = {"@type": "Restaurant", "name": v["name"],
+             "servesCuisine": v.get("type_en") or v.get("type"), "address": addr}
+        if v.get("lat") is not None and v.get("lng") is not None:
+            r["geo"] = {"@type": "GeoCoordinates", "latitude": v["lat"], "longitude": v["lng"]}
+        items.append({"@type": "ListItem", "position": i + 1, "item": r})
+    graph = [
+        {"@type": "WebSite", "@id": idb + "/#website",
+         "name": cfg.get("caption_brand_en") or cfg.get("site_title", ""),
+         "url": home, "inLanguage": ["zh-CN", "en"]},
+        {"@type": "ItemList", "@id": idb + "/#list", "name": cfg.get("site_title", ""),
+         "url": home, "numberOfItems": len(items),
+         "itemListOrder": "https://schema.org/ItemListOrderAscending",
+         "itemListElement": items},
+    ]
+    ld = {"@context": "https://schema.org", "@graph": graph}
+    return '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False, separators=(",", ":")) + "</script>"
+
+AI_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot",
+           "ClaudeBot", "Claude-Web", "Google-Extended", "Applebot-Extended"]
+
+def build_robots(cfg):
+    site = cfg.get("site_url", "/").rstrip("/")
+    lines = ["User-agent: *", "Allow: /", "",
+             "# AI / answer engines — explicitly welcome (we want to be cited)"]
+    for b in AI_BOTS:
+        lines += [f"User-agent: {b}", "Allow: /"]
+    if site.startswith("http"):
+        lines += ["", f"Sitemap: {site}/sitemap.xml"]
+    return "\n".join(lines) + "\n"
+
+def build_sitemap(cfg):
+    site = cfg.get("site_url", "/").rstrip("/") or ""
+    home = (site + "/") if site.startswith("http") else "/"
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'  <url><loc>{home}</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>\n'
+            '</urlset>\n')
+
+def build_llms(cfg, venues, groups_zh):
+    title = cfg.get("site_title", "City Food Guide")
+    site = cfg.get("site_url", "").rstrip("/")
+    cats = " · ".join(g for g in groups_zh if g != "全部")
+    return (f"# {title}\n\n"
+            f"> A curated, hand-tested city food guide. Bilingual (中文 / English). "
+            f"{len(venues)} venues, each personally checked; cuisines and addresses verified.\n\n"
+            f"## About\n- {len(venues)} venues, updated monthly\n- Categories: {cats}\n"
+            f"- Each listing has cuisine, address, and a one-tap Google Maps link\n"
+            f"- Full schema.org structured data (ItemList + Restaurant) is embedded in the homepage as JSON-LD\n"
+            + (f"\n## Links\n- Site: {site}\n" if site.startswith("http") else ""))
+
 def main():
     if len(sys.argv) < 2:
         die("usage: build_guide.py <guide.json> [out_dir=dist]")
@@ -105,6 +167,7 @@ def main():
         "{{PDF_URL}}":           cfg.get("pdf_url", ""),
         "{{CAPTION_BRAND_ZH}}":  cfg.get("caption_brand_zh", cfg.get("site_title", "")),
         "{{CAPTION_BRAND_EN}}":  cfg.get("caption_brand_en", cfg.get("site_title", "")),
+        "{{JSONLD}}":            build_jsonld(cfg, venues),
     }
     missing = [k for k in repl if k not in html]
     if missing:
@@ -118,6 +181,10 @@ def main():
 
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(html, encoding="utf-8")
+    # SEO / GEO sidecar files
+    (out_dir / "robots.txt").write_text(build_robots(cfg), encoding="utf-8")
+    (out_dir / "sitemap.xml").write_text(build_sitemap(cfg), encoding="utf-8")
+    (out_dir / "llms.txt").write_text(build_llms(cfg, venues, group_zh), encoding="utf-8")
     n_geo = len(geo); n = len(venues)
     print(f"built {out_dir/'index.html'}  ({n} venues, {n_geo} mapped, "
           f"{len(featured)} featured, {len(type_en)} type labels)")

@@ -36,6 +36,11 @@ A static, dependency-free `index.html` with:
   "just kidding — follow me ❤️" and opens your 小红书 (`xhs_url`). Degrades to a plain link
   without JS.
 - **End-cap CTA tile** that fills the orphaned last grid cell.
+- **SEO + GEO baked in** — the build injects schema.org JSON-LD (`ItemList` + a
+  `Restaurant` per venue with cuisine/address/geo) so the venue data is machine-readable
+  even though the grid is JS-rendered (most AI crawlers don't run JS). It also emits
+  `robots.txt` (explicitly allowing GPTBot/PerplexityBot/ClaudeBot/Google-Extended so you
+  can be cited by answer engines), `sitemap.xml`, and `llms.txt`.
 
 ![demo](assets/demo.png)
 
@@ -56,6 +61,7 @@ A static, dependency-free `index.html` with:
     "xhs_url": "https://xhslink.com/m/…", "xhs_handle": "@Skylar创业版",  // xhs_url = "buy me a coffee" target
     "mymaps_url": "https://www.google.com/maps/d/viewer?mid=…",  // unlocked after subscribe
     "pdf_url": "Skylar-NYC-100.pdf",                            // unlocked after subscribe (site-root path or full URL)
+    "locality": "New York", "region": "NY", "country": "US",    // optional — enriches the JSON-LD addresses
     "caption_brand_zh": "Skylar 私藏纽约好吃榜",
     "caption_brand_en": "Skylar's NYC 100",
     "groups": [ {"zh":"全部","en":"All"}, {"zh":"日料","en":"Japanese"}, … ]
