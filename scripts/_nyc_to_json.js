@@ -1,7 +1,7 @@
 // One-time: lift the NYC-100 master HTML's inline data into a clean guide.json.
 // Usage: node scripts/_nyc_to_json.js <master.html> <out.json>
 const fs = require('fs');
-const src = process.argv[2] || "/Users/jiayiwang/Desktop/2026/自媒体/吃饭/纽约美食100-pro.html";
+const src = process.argv[2] || "/Users/Skylar/Desktop/2026/自媒体/吃饭/纽约美食100-pro.html";
 const out = process.argv[3] || "examples/nyc-100.json";
 const html = fs.readFileSync(src, 'utf8');
 

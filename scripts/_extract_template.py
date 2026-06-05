@@ -10,7 +10,7 @@ Not part of the normal build loop — build_guide.py consumes the template.
 import re, sys, pathlib
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else \
-    "/Users/jiayiwang/Desktop/2026/自媒体/吃饭/纽约美食100-pro.html"
+    "/Users/Skylar/Desktop/2026/自媒体/吃饭/纽约美食100-pro.html"
 OUT = pathlib.Path(__file__).resolve().parent.parent / "template" / "guide.template.html"
 
 html = pathlib.Path(SRC).read_text(encoding="utf-8")
