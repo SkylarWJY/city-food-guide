@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ANALYTICS}}
 <title>{{SITE_TITLE}}</title>
 <meta name="description" content="一份吃过才敢写的纽约美食地图——100 家亲测、逐家核对菜系与地址。看中哪家，点开直接导航。A NYC food map I only dared write after eating my way through all 100.">
 <link rel="canonical" href="{{SITE_URL}}">
@@ -602,7 +603,14 @@ function wireChecks(){
   grid.querySelectorAll('.cshare').forEach(b=>b.addEventListener('click',e=>{
     e.preventDefault(); e.stopPropagation();
     const name=b.dataset.share.replace(/&quot;/g,'"');
+    if(window.track) track('share_store',{venue:name});
     const d=data.find(z=>z.name===name); if(d) genStoreCard(d);
+  }));
+  grid.querySelectorAll('.maplink').forEach(a=>a.addEventListener('click',()=>{
+    if(!window.track) return;
+    const card=a.closest('.card'), nm=card&&card.querySelector('.name');
+    const name=nm?(nm.firstChild&&nm.firstChild.textContent||nm.textContent).trim():'';
+    track(a.classList.contains('resv')?'click_reserve':'click_directions',{venue:name});
   }));
 }
 function visitedCount(){return data.filter(d=>visited[d.name]).length;}
@@ -675,6 +683,7 @@ function openShareModal(blob, filename, caption){
 }
 async function genShareCard(){
   if(genShareCard._busy) return; genShareCard._busy=true;
+  if(window.track) track('share_score',{count:visitedCount()});
   const lblEl=document.getElementById('tkShareLabel'), orig=lblEl.textContent;
   lblEl.textContent=lang!=='en'?'生成中…':'Generating…';
   try{
@@ -856,6 +865,7 @@ document.getElementById('tkShare').onclick=genShareCard;
 /* ☕ "buy me a coffee" — the gag: it's a follow button in disguise. The <a> still opens 小红书
    (works without JS / right-clickable); the handler just flips the label to the punchline. */
 document.getElementById('coffeeBtn').addEventListener('click',()=>{
+  if(window.track) track('coffee_poke',{poked_before:coffeePoked});
   coffeePoked=true;
   const lbl=document.getElementById('coffeeLabel'), btn=document.getElementById('coffeeBtn');
   lbl.textContent=UI[lang].coffeePunch;

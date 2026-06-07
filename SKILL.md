@@ -41,6 +41,11 @@ A static, dependency-free `index.html` with:
   even though the grid is JS-rendered (most AI crawlers don't run JS). It also emits
   `robots.txt` (explicitly allowing GPTBot/PerplexityBot/ClaudeBot/Google-Extended so you
   can be cited by answer engines), `sitemap.xml`, and `llms.txt`.
+- **Analytics, opt-in** — set `ga4_id` and/or `goatcounter_code` in config and the build
+  injects the trackers into `<head>`. GA4 also installs `window.track()`, wired to fire
+  custom events on the key conversions: `click_directions` (去这家), `click_reserve` (订位),
+  `share_store` (per-venue share), `share_score` (打卡战绩), `coffee_poke` (the follow gag).
+  Leave both blank and the page builds with zero analytics — no broken tags.
 
 ![demo](assets/demo.png)
 
@@ -62,6 +67,8 @@ A static, dependency-free `index.html` with:
     "mymaps_url": "https://www.google.com/maps/d/viewer?mid=…",  // unlocked after subscribe
     "pdf_url": "Skylar-NYC-100.pdf",                            // unlocked after subscribe (site-root path or full URL)
     "locality": "New York", "region": "NY", "country": "US",    // optional — enriches the JSON-LD addresses
+    "ga4_id": "G-RJ2S4B43VF",          // optional — GA4 Measurement ID; injects gtag + window.track() custom events
+    "goatcounter_code": "skylarnyc",    // optional — GoatCounter subdomain slug (cookie-less, ~3KB)
     "caption_brand_zh": "Skylar 私藏纽约好吃榜",
     "caption_brand_en": "Skylar's NYC 100",
     "groups": [ {"zh":"全部","en":"All"}, {"zh":"日料","en":"Japanese"}, … ]

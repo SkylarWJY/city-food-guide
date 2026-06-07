@@ -27,6 +27,34 @@ import json, sys, pathlib
 def die(msg):
     print(f"build_guide: {msg}", file=sys.stderr); sys.exit(1)
 
+# ---- analytics: optional GA4 + GoatCounter, injected into <head> (empty if neither configured) ----
+def build_analytics(cfg):
+    """Render the <head> analytics snippet. Both are optional — set
+    config.ga4_id ("G-XXXXXXXXXX") and/or config.goatcounter_code (a subdomain
+    slug, e.g. "skylarnyc"). GA4 also installs window.track(name, params), a
+    tiny safe wrapper the template's click handlers call to fire custom events
+    (click_directions / click_reserve / share_store / share_score / coffee_poke).
+    Returns "" when neither is set, so sites without analytics build cleanly."""
+    ga4 = (cfg.get("ga4_id") or "").strip()
+    gc  = (cfg.get("goatcounter_code") or "").strip()
+    out = []
+    if gc:
+        out.append('<!-- analytics: GoatCounter (privacy-friendly, cookie-less, ~3KB) -->')
+        out.append(f'<script data-goatcounter="https://{gc}.goatcounter.com/count" '
+                   'async src="//gc.zgo.at/count.js"></script>')
+    if ga4:
+        out.append(f'<!-- Google Analytics 4 ({ga4}) -->')
+        out.append(f'<script async src="https://www.googletagmanager.com/gtag/js?id={ga4}"></script>')
+        out.append('<script>')
+        out.append('  window.dataLayer = window.dataLayer || [];')
+        out.append('  function gtag(){dataLayer.push(arguments);}')
+        out.append("  gtag('js', new Date());")
+        out.append(f"  gtag('config', '{ga4}');")
+        out.append('  // tiny helper so click handlers can fire custom events safely')
+        out.append("  window.track=function(name,params){try{gtag('event',name,params||{});}catch(e){}};")
+        out.append('</script>')
+    return "\n".join(out)
+
 # ---- SEO / GEO: structured data + crawler files (drives Google rich results + AI-engine citations) ----
 def build_jsonld(cfg, venues):
     site = cfg.get("site_url", "/").rstrip("/")
@@ -168,6 +196,7 @@ def main():
         "{{CAPTION_BRAND_ZH}}":  cfg.get("caption_brand_zh", cfg.get("site_title", "")),
         "{{CAPTION_BRAND_EN}}":  cfg.get("caption_brand_en", cfg.get("site_title", "")),
         "{{JSONLD}}":            build_jsonld(cfg, venues),
+        "{{ANALYTICS}}":         build_analytics(cfg),
     }
     missing = [k for k in repl if k not in html]
     if missing:

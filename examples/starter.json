@@ -17,6 +17,8 @@
     "xhs_handle": "@your_xhs",
     "mymaps_url": "https://www.google.com/maps/d/viewer?mid=YOUR-MY-MAPS-ID",
     "pdf_url": "your-guide.pdf",
+    "ga4_id": "",
+    "goatcounter_code": "",
     "caption_brand_zh": "我的城市好吃榜",
     "caption_brand_en": "My City 100",
     "groups": [
