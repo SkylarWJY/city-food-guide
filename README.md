@@ -119,6 +119,8 @@ examples/nyc-100.json          完整范例：真实的 100 家纽约餐厅
 
 照片和构建产物默认 `.gitignore` —— 带上你自己的图就好。
 
+> 💡 `examples/nyc-100.json` 不是玩具数据 —— 它就是线上真实站点 [**skylarnyc.com**](https://skylarnyc.com) 背后的完整数据集。*It's the real dataset powering the live production site.*
+
 ---
 
 <div align="center">
@@ -129,3 +131,11 @@ examples/nyc-100.json          完整范例：真实的 100 家纽约餐厅
 由 [**Skylar's NYC 100**](https://skylar-nyc-100.netlify.app) 提炼而来 · MIT License · PRs welcome 🍣
 
 </div>
+
+---
+
+## 🛰 更多来自 Skylar · More from Skylar
+
+- [**ANSIO**](https://github.com/SkylarWJY/ANSIO-conversational) — 创作者的对话式增长引擎 · the first conversational growth engineer for creators
+- [**skylarnyc.com**](https://skylarnyc.com) — 本引擎驱动的线上站点「纽约约会 100 家」· the live site built with this engine
+- 更多项目 · More → [github.com/SkylarWJY](https://github.com/SkylarWJY)
